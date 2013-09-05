@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Kinder Light House</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
+<link rel="stylesheet" href="css/jquery.mobile-1.0.min.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.0.min.js"></script>
+<script src="phonegap-1.2.0.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/styles.css">
+<script type="text/javascript" src="js/funciones.js"></script>
+</head>
+<body>
+<div data-role="page" id="bienvenidos">
+	<div data-role="content">
+		<a href="#padres" data-transition="flip" id="onoffportrait"><img src="images/onoffportrait.jpg" class="tablaFull" id="portrait"><img src="images/onofflandscape.jpg" class="tablaFull" id="landscape"></a>
+    </div>
+</div>
+<div data-role="page" id="padres">
+	<div data-role="content">
+		<table class="tablacentro" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="center"><p>Lighthouse es un centro infantil de excelencia, portador de un innovador modelo de programas para preescolar que propone el desarrollo de capacidades, destrezas y habilidades propias de la edad infantil.</p></td>
+          </tr>
+          <tr>
+            <td class="center"><a href="#login" data-transition="slide" id="ingresar"><img src="images/btnIngresar.png" alt="" width="243" height="32"></a></td>
+          </tr>
+        </table>
+    </div>
+</div>
+<div data-role="page" id="login">
+	<div data-role="content">
+        <table class="tablacentro" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="left">&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="left">Contaseña:</td>
+          </tr>
+          <tr>
+            <td align="left"><input name="pass" type="password" id="pass" onChange="setPass();"></td>
+          </tr>
+          <tr>
+            <td><input type="hidden" id="user" value="general"></td>
+          </tr>
+          <tr>
+            <td><a href="#home" data-transition="flip"><img src="images/btnLogin.png" alt="" width="95" height="39" style="margin-right:0px; margin-top:5px;"></a></td>
+          </tr>
+        </table>
+    </div>
+</div>
+<div data-role="page" id="home">
+	<div data-role="header">
+		<table class="tablaFull" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="57">&nbsp;</td>
+            <td align="center"><a href="#agenda" data-transition="slide"><img src="images/btnAgenda.png" alt="" width="27" height="24"></a></td>
+            <td align="left" width="57"><a href="#comunidad" data-transition="slide"><img src="images/btnComunidad.png" alt="" width="40" height="23"></a></td>
+          </tr>
+        </table>
+	</div>
+    <div data-role="content">
+		<table id="tablaDibujos" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="30%" height="33%" bgcolor="#81614e"><img src="images/arbol.gif" id="arbol" alt=""></td>
+            <td width="40%" rowspan="2" bgcolor="#FFFFFF"><img src="images/KinderLightHouse.gif" id="logo" alt=""></td>
+            <td width="30%" bgcolor="#36a094"><img src="images/maiz.gif" id="maiz" alt=""></td>
+          </tr>
+          <tr>
+            <td height="33%" bgcolor="#cd6933"><img src="images/cerezas.gif" id="cerezas" alt=""></td>
+            <td bgcolor="#86b540"><img src="images/ardilla.gif" id="ardilla" alt=""></td>
+          </tr>
+          <tr id="tablapie">
+            <td height="33%" bgcolor="#b2d3cd"><img src="images/mariposa.gif" id="mariposa" alt=""></td>
+            <td bgcolor="#e03d93"><img src="images/flor.gif" id="flor" alt=""></td>
+            <td bgcolor="#cc6731"><img src="images/abeja.gif" id="abeja" alt=""></td>
+          </tr>
+        </table>
+        <div id="resultado" style="display:none;"></div>
+    </div>
+</div>
+<div data-role="page" id="agenda">
+	<div data-role="header">
+		<table class="tablaFull" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="right" width="69"><a href="index.html" data-rel="back"><img src="images/btnBack.gif" alt="" width="52" height="23"></a></td>
+            <td>&nbsp;</td>
+            <td align="left" width="57"><a href="#comunidad" data-transition="slide"><img src="images/btnComunidad.png" alt="" width="40" height="23"></a></td>
+          </tr>
+        </table>
+	</div>
+	<div data-role="content">
+		<div class="titulo">ACTIVIDADES DEL MES</div>
+        <div id="listado"></div>
+    </div>
+</div>
+<div data-role="page" id="comunidad">
+	<div data-role="header">
+		<table class="tablaFull" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="right" width="69"><a href="index.html" data-rel="back"><img src="images/btnBack.gif" alt="" width="52" height="23"></a></td>
+            <td>&nbsp;</td>
+            <td width="57">&nbsp;</td>
+          </tr>
+        </table>
+	</div>
+	<div data-role="content" style="height:100%;">
+		<div class="titulo">PROXIMAMENTE</div>
+        <div>&nbsp;</div>
+    </div>
+</div>
+<div data-role="page" id="ficha">
+	<div data-role="content">
+		<div class="titulo">
+        <table class="tablaFull" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" width="93"><a href="index.html" data-rel="back"><img src="images/btnAtras.png" alt="" width="73" height="24"></a></td>
+            <td align="left" id="fechatitulo"></td>
+          </tr>
+        </table>
+        </div>
+		<p id="texto"></p>
+    </div>
+</div>
+</body>
+</html>
